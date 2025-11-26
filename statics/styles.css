@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #b38bfa, #f1d6ff);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+}
+
+h1 {
+    color: #4a0072;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.btn {
+    background-color: #7a42ff;
+    color: white;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #4a0072;
+    transform: scale(1.1);
+}
+
+.btn-normal {
+    background-color: #ff62b7;
+}
+
+.btn-normal:hover {
+    background-color: #c70077;
+}
+
+.contenedor-botones {
+    margin-top: 30px;
+}
+
+/* Menús desplegables */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 12px;
+    color: #4a0072;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

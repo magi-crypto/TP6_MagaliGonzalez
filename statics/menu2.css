@@ -1,0 +1,52 @@
+/* Título con imagen */
+.titulo-con-imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.titulo-con-imagen img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 10px;
+    background: #e3f2fd;
+    padding: 6px;
+    border: 1px solid #bbdefb;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+/* MENÚ VERTICAL */
+.menu-vertical {
+    width: 220px;
+    margin: 35px auto;
+    background: #1e3a5f;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.menu-vertical a {
+    display: block;
+    padding: 12px;
+    margin: 8px 0;
+    text-decoration: none;
+    background: #274b78;
+    color: #e3f2fd;
+    border-radius: 8px;
+    transition: 0.25s;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.menu-vertical a:hover {
+    background: #1e88e5;
+    transform: scale(1.05);
+}
+
+.menu-vertical .activo {
+    background: #1565c0;
+    font-weight: bold;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu 3 - Menú Hamburguesa</title>
+
+    <!-- Estilos generales -->
+    <link rel="stylesheet" href="../statics/styles.css">
+
+    <!-- CSS específico para menú hamburguesa -->
+    <link rel="stylesheet" href="../statics/menu3.css">
+
+    <!-- Estilo solo de la imagen junto al título -->
+    <style>
+        .titulo-con-imagen {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 35px;
+            justify-content: center;
+        }
+
+        .titulo-con-imagen img {
+            width: 90px;
+            height: 70px;
+            border-radius: 10px;
+            object-fit: cover;
+            background: #e3f2fd;
+            padding: 8px;
+            box-shadow: 0px 3px 10px rgba(0,0,0,0.15);
+            border: 1px solid #bbdefb;
+        }
+    </style>
+
+</head>
+<body>
+
+<header>
+    <div class="hamburguesa-menu">
+        <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+
+        <nav id="nav-hamburguesa" class="nav-hamburguesa nav-oculto">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="multimedia1.html">Multimedia 1</a></li>
+                <li><a href="multimedia2.html">Multimedia 2</a></li>
+                <li><a href="multimedia3.html">Multimedia 3</a></li>
+                <li><a href="menu1.html">Menú 1</a></li>
+                <li><a href="menu2.html">Menú 2</a></li>
+                <li><a href="menu3.html">Menú 3</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="contenido">
+    <div class="titulo-con-imagen">
+        <h1>Menú Tipo Hamburguesa</h1>
+        <img src="../statics/images/menu.png" alt="Menú">
+    </div>
+    <p>Haz clic en el icono para desplegar u ocultar los enlaces del menú.</p>
+</main>
+
+<script>
+    function toggleMenu() {
+        const nav = document.getElementById("nav-hamburguesa");
+        nav.classList.toggle("nav-oculto");
+    }
+
+    document.addEventListener('click', function(event) {
+        const nav = document.getElementById("nav-hamburguesa");
+        const icon = document.querySelector('.menu-icon');
+
+        if (!nav.contains(event.target) && !icon.contains(event.target)) {
+            nav.classList.add('nav-oculto');
+        }
+    });
+</script>
+
+    <footer style="text-align:center; margin-top:40px; color:#555;">
+        Desarrollado por Magali Gonzalez
+    </footer>
+
+</body>
+</html>
